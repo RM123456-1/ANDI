@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ANDI Questions,  Answers and Sources</title>
+    <title>ANDI Questions</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -24,12 +24,15 @@
             border: 1px solid #ddd;
             background-color: #f9f9f9;
         }
+        h1 {
+            font-style: italic;
+        }
     </style>
 </head>
 <body>
-    <h1>ANDI Questions,  Answers and Sources</h1>
+    <h1>ANDI Questions</h1>
     <label for="questionNumber">Enter Question Number:</label>
-    <input type="text" id="questionNumber" placeholder="Enter your question number...">
+    <input type="text" id="questionNumber" placeholder="Enter question number...">
     <button onclick="checkSource()">Check Source</button>
     <div id="result" class="result" style="display: none;"></div>
 
@@ -81,7 +84,7 @@
             const questionData = data.find(item => item.number.toString() === questionNumber);
 
             if (questionData) {
-                resultDiv.innerHTML = `<strong>Question:</strong> ${questionData.question}<br><br><strong>Source:</strong> ${questionData.source}`;
+                resultDiv.innerHTML = `<strong>Question:</strong> ${questionData.question}<br><br><strong>Outcome:</strong> ${questionData.outcome}<br><br><strong>Source:</strong> ${questionData.source}`;
                 resultDiv.style.display = 'block';
             } else {
                 resultDiv.innerHTML = 'Question not found. Please enter a valid question number.';
