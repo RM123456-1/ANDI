@@ -80,14 +80,14 @@
             const resultDiv = document.getElementById('result');
             const questionData = data.find(item => item.number.toString() === questionNumber);
 
-            if (questionData) {
-                resultDiv.innerHTML = `<strong>Question:</strong> ${questionData.question}<br><br><strong>Outcome:</strong> ${questionData.outcome}<br><br><strong>Source:</strong> ${questionData.source}`;
-                resultDiv.style.display = 'block';
-            } else {
-                resultDiv.innerHTML = 'Question not found. Please enter a valid question number.';
-                resultDiv.style.display = 'block';
-            }
-        }
+                if (questionData) {
+                    resultDiv.innerHTML = `<strong>Question:</strong> ${questionData.question}<br><br><strong>Outcome:</strong> ${questionData.outcome}<br><br><strong>Source:</strong> ${questionData.source}`;
+                    resultDiv.style.display = 'block';} 
+                else {
+                    resultDiv.innerHTML = 'Question not found. Please enter a valid question number.';
+                    resultDiv.style.display = 'block';
+    }
+}
     </script>
 </body>
 </html>
